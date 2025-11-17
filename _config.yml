@@ -25,7 +25,7 @@ author:
   # Biographic information
   avatar           : "profile.jpg"
   name             : "Ramneek Kaur"
-  pronouns         : "she/her"  
+  pronouns         : # "she/her"
   bio              : "Short biography for the left-hand sidebar"
   location         : "Delhi, India"
   employer         : "IIT Delhi"
@@ -63,7 +63,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/kramneek/"
+  linkedin         : "kramneek"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
