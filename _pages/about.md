@@ -29,3 +29,5 @@ I am a Postdoctoral Research Fellow with the [ACT4D]() research group at IIT Del
 Prior to this, I completed my Ph.D. from [IIIT-Delhi]() in 2022, where my research focused on developing navigation and task allocation algorithms to promote sustainability in urban transportation systems.
 
 My broader research interests lie in the use of ICT for social development, with a focus on leveraging computational methods to drive sustainability and equity in both rural and urban contexts.
+
+---
