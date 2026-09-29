@@ -1,0 +1,15 @@
+{
+  "name": "Harmeet Singh",
+  "role": "Solution architect",
+  "location": "Delhi, India",
+  "photo": "images/harmeet.jpg",
+  "headline": "Hi, I’m Harmeet Singh.",
+  "summary": "I have 14+ years in software engineering, working across cloud platforms, distributed systems and applied AI. I bring architecture and delivery together to build systems that solve real problems.",
+  "expertise": ["Azure", "AWS", "Microservices", "Event Driven", "Event-driven systems", "GenAI & RAG", "Data Engineering", "Engineering leadership"],
+  "about": "I work across architecture strategy, hands-on delivery and engineering practice, with a focus on Azure, distributed systems and applied AI.",
+  "skills": "C#, .NET, Python, TypeScript, React, Azure Functions, Service Bus, Event Hub, Cosmos DB, Azure AI Search, Azure OpenAI, AWS serverless, Docker, Kubernetes, Terraform and CI/CD.",
+  "certifications": ["AZ-305", "AZ-204", "AWS Certified Developer Associate", "TOGAF 10 Foundation"],
+  "email": "write2harsingh@gmail.com",
+  "contactIntro": "Have an architecture challenge, an idea to compare, or an opportunity to discuss? Send me a note.",
+  "contactNote": "I’m interested in conversations about cloud platforms, distributed systems, applied AI and engineering leadership."
+}

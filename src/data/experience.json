@@ -1,0 +1,51 @@
+[
+  {
+    "period": "Mar 2022 — present",
+    "organization": "Egon Zehnder",
+    "role": "Application Architect",
+    "location": "Delhi",
+    "summary": "Guide architecture direction across the firm’s digital ecosystem and lead rapid prototyping and technical standards.",
+    "highlights": [
+      "Led modernization of legacy applications toward Azure microservices and event-driven architecture.",
+      "Established technical reference documentation, branching and code review practices across development teams.",
+      "Validated enterprise API management through a proof of concept and worked with leadership on adoption.",
+      "Architected and delivered Zendai Jump to support interoperability across the Zendai ecosystem."
+    ]
+  },
+  {
+    "period": "Apr — Oct 2021",
+    "organization": "SCI-BI Software",
+    "role": "Technical Architect",
+    "location": "Delhi",
+    "summary": "Designed an Azure eKYC solution combining video, computer vision and Durable Functions. Led the design and MVP of an AWS serverless analytics tool.",
+    "highlights": []
+  },
+  {
+    "period": "May 2017 — Feb 2021",
+    "organization": "Giesecke + Devrient",
+    "role": "Technical Architect / Head of Applications",
+    "location": "Delhi",
+    "summary": "Owned architecture and delivery of a global field service platform and led a 10-person engineering team.",
+    "highlights": [
+      "Supported approximately 2,000 engineers worldwide with an offline-first platform integrated with SAP.",
+      "Led the build-versus-buy decision for an in-house field service solution.",
+      "Designed real-time location tracking with Azure IoT Hub."
+    ]
+  },
+  {
+    "period": "2015 — 2017",
+    "organization": "ITC Infotech",
+    "role": "Senior Consultant",
+    "location": "Delhi",
+    "summary": "",
+    "highlights": []
+  },
+  {
+    "period": "2012 — 2014",
+    "organization": "Protiviti",
+    "role": "Senior Software Engineer",
+    "location": "Delhi",
+    "summary": "",
+    "highlights": []
+  }
+]

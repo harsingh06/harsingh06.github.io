@@ -1,0 +1,8 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import profile from '../data/profile.json';
+---
+<SiteLayout title="Contact" description="Contact Harmeet Singh for a conversation about architecture, cloud and applied AI." active="Contact">
+  <div class="page-head shell"><span class="eyebrow">Contact</span><h1>Let’s talk.</h1><p class="lead">{profile.contactIntro}</p></div>
+  <section class="section shell contact"><div><span class="meta">Email</span><h2><a href={`mailto:${profile.email}`}>{profile.email} ↗</a></h2><p>Based in {profile.location}.</p></div><p>{profile.contactNote}</p></section>
+</SiteLayout>

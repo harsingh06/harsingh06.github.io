@@ -1,0 +1,12 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import profile from '../data/profile.json';
+import experience from '../data/experience.json';
+---
+<SiteLayout title="Experience" description="Harmeet Singh’s work experience and areas of expertise." active="Experience">
+  <div class="page-head shell"><span class="eyebrow">Background</span><h1>Experience</h1><p class="lead">{profile.about}</p></div>
+  <section class="section shell">
+    {experience.map(item => <div class="role"><div><span class="meta">{item.period}</span><h2>{item.organization}</h2><p>{item.role} · {item.location}</p></div><div>{item.summary && <p>{item.summary}</p>}{item.highlights.length > 0 && <ul>{item.highlights.map(highlight => <li>{highlight}</li>)}</ul>}</div></div>)}
+  </section>
+  <section class="section shell"><span class="eyebrow">Core expertise</span><h2>Tools and practices</h2><p class="narrow">{profile.skills}</p><span class="eyebrow">Certifications</span><p>{profile.certifications.join(' · ')}</p></section>
+</SiteLayout>

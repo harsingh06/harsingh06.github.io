@@ -1,0 +1,43 @@
+{
+  "highlights": [
+    {
+      "organization": "Egon Zehnder",
+      "category": "Cloud modernization",
+      "title": "Modernizing enterprise applications",
+      "description": "Guided the transition from legacy applications to Azure microservices and event-driven architecture, supported by engineering standards.",
+      "logo": null
+    },
+    {
+      "organization": "Giesecke + Devrient",
+      "category": "Field service",
+      "title": "Digital field operations",
+      "description": "Led a platform adopted by approximately 2,000 field engineers worldwide, with offline-first workflows and SAP integration.",
+      "logo": null
+    },
+    {
+      "organization": "SCI-BI Software",
+      "category": "Identity",
+      "title": "Scalable eKYC",
+      "description": "Designed identity verification with Azure Communication Services, Vision, OCR and Durable Functions orchestration.",
+      "logo": null
+    }
+  ],
+  "community": [
+    {
+      "type": "Personal project",
+      "title": "sggs.app",
+      "description": "A digital reading experience for Sehaj Path, with ideas for a wider knowledge and learning space.",
+      "url": "https://sggs.app",
+      "linkLabel": "Visit sggs.app",
+      "logo": null
+    },
+    {
+      "type": "Community contribution",
+      "title": "AkalConnect",
+      "description": "Contributing to the online presence of a community initiative connected with education and service.",
+      "url": "https://akalconnect.org",
+      "linkLabel": "Visit AkalConnect",
+      "logo": null
+    }
+  ]
+}

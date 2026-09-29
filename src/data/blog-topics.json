@@ -1,0 +1,27 @@
+[
+  {
+    "title": "When structured output is not enough",
+    "description": "A look at confidence, calibration and parallel decisions, alongside latency and cost.",
+    "category": "Applied AI",
+    "tags": ["Applied AI", "LLM evaluation"],
+    "status": "Upcoming",
+    "updatedAt": "2026-09-29T16:56:00+05:30",
+    "featured": true
+  },
+  {
+    "title": "Events, boundaries and integration",
+    "description": "How to reason about domain events, contracts and operational visibility.",
+    "category": "Distributed systems",
+    "tags": ["Distributed systems", "Architecture"],
+    "status": "Upcoming",
+    "updatedAt": "2026-09-29T16:56:00+05:30"
+  },
+  {
+    "title": "Choosing a deployment model on Azure",
+    "description": "Working through practical trade-offs for services and teams.",
+    "category": "Cloud",
+    "tags": ["Cloud", "Azure"],
+    "status": "Upcoming",
+    "updatedAt": "2026-09-29T16:56:00+05:30"
+  }
+]
