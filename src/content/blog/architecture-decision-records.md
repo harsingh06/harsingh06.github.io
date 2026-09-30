@@ -4,6 +4,7 @@ description: "A short example of recording the context, trade-offs and consequen
 pubDate: 2026-09-29
 tags: ["Architecture", "Decision records"]
 category: "Architecture"
+sample: true
 ---
 
 > **Sample article:** This is demonstration content for the website. Replace or edit it before sharing it as your own published writing.

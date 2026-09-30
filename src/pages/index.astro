@@ -27,27 +27,18 @@ const posts = (await getCollection("blog")).sort(
       <div class="actions">
         <a class="text-link" href={link("experience/")}>View experience ↗</a><a
           class="text-link"
-          href={link("contact/")}>Get in touch ↗</a
-        >
+          href={link("contact/")}>Get in touch ↗</a>
       </div>
     </div>
     {
-      profile.photo ? (
+      profile.photo && (
         <div class="portrait portrait-photo">
           <img
             src={link(profile.photo)}
             alt={`Portrait of ${profile.name}`}
-            width="160"
-            height="206"
+            width="800"
+            height="800"
           />
-        </div>
-      ) : (
-        <div
-          class="portrait"
-          role="img"
-          aria-label={`Portrait placeholder for ${profile.name}`}
-        >
-          <div class="portrait-mark">HS</div><span>Photo coming soon</span>
         </div>
       )
     }
@@ -56,8 +47,8 @@ const posts = (await getCollection("blog")).sort(
     <div class="section-title">
       <div>
         <span class="eyebrow">Selected work</span><h2>Project highlights</h2>
-      </div><a class="text-link" href={link("experience/")}>Full experience ↗</a
-      >
+      </div><a class="text-link" href={link("experience/")}
+        >Full experience ↗</a>
     </div>
     <div class="highlights">
       {
@@ -129,12 +120,11 @@ const posts = (await getCollection("blog")).sort(
     <div class="section-title">
       <div><span class="eyebrow">Writing</span><h2>Featured writing</h2></div><a
         class="text-link"
-        href={link("blog/")}>Visit the blog ↗</a
-      >
+        href={link("blog/")}>Visit the blog ↗</a>
     </div>
     <div class="posts">
       {
-        posts.slice(0, 5).map((post) => (
+        posts.slice(0, 1).map((post) => post.data.featured && (
           <article>
             <>
               <span class="meta">
@@ -151,28 +141,6 @@ const posts = (await getCollection("blog")).sort(
           </article>
         ))
       }
-      <!-- {
-        topics.slice(0, 5).map(
-          (topic) =>
-            topic.featured == true && (
-              <article>
-                <>
-                  <span class="meta">
-                    {topic.status} · {topic.category}
-                  </span>
-                  <h3>{topic.title}</h3>
-                  <p>{topic.description}</p>
-                  <a class="text-link" href={link(`blog/${topic.category}/`)}>
-                    Read article ↗
-                  </a>
-                </>
-              </article>
-            ),
-        )
-      } -->
     </div>
-    <!-- <p class="note">
-      The article is sample content; the other topic is in preparation.
-    </p> -->
   </section>
 </SiteLayout>

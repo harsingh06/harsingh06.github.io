@@ -32,20 +32,6 @@
       "Designed real-time location tracking with Azure IoT Hub."
     ]
   },
-  {
-    "period": "2015 — 2017",
-    "organization": "ITC Infotech",
-    "role": "Senior Consultant",
-    "location": "Delhi",
-    "summary": "",
-    "highlights": []
-  },
-  {
-    "period": "2012 — 2014",
-    "organization": "Protiviti",
-    "role": "Senior Software Engineer",
-    "location": "Delhi",
-    "summary": "",
-    "highlights": []
-  }
+  {"period": "2015 — 2017", "organization": "ITC Infotech", "role": "Senior Consultant", "location": "Delhi", "summary": "", "highlights": []},
+  {"period": "2012 — 2014", "organization": "Protiviti", "role": "Senior Software Engineer", "location": "Delhi", "summary": "", "highlights": []}
 ]

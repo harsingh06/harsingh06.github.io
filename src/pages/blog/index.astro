@@ -1,33 +1,114 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import topics from '../../data/blog-topics.json';
-import { getCollection } from 'astro:content';
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import topics from "../../data/blog-topics.json";
+import { getCollection } from "astro:content";
 const base = import.meta.env.BASE_URL;
 const link = (path: string) => `${base}${path}`;
-const posts = (await getCollection('blog')).sort((a,b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
 const items = [
-  ...posts.map(post => ({ title: post.data.title, description: post.data.description, category: post.data.category, tags: post.data.tags, status: post.data.sample ? 'Sample article' : 'Published', date: post.data.pubDate, url: link(`blog/${post.id}/`) })),
-  ...topics.map(topic => ({ ...topic, date: new Date(topic.updatedAt), url: '' })),
+  ...posts.map((post) => ({
+    title: post.data.title,
+    description: post.data.description,
+    category: post.data.category,
+    tags: post.data.tags,
+    status: "Published",
+    date: post.data.pubDate,
+    url: link(`blog/${post.id}/`),
+  }))
+  // ,...topics.map((topic) => ({
+  //   ...topic,
+  //   date: new Date(topic.updatedAt),
+  //   url: "",
+  // })),
 ];
-const categories = [...new Set(items.map(item => item.category))];
-const slug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-const format = (date: Date) => new Intl.DateTimeFormat('en-IN', { day:'numeric', month:'short', year:'numeric', timeZone:'Asia/Kolkata' }).format(date);
+const categories = [...new Set(items.map((item) => item.category))];
+const slug = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+const format = (date: Date) =>
+  new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "Asia/Kolkata",
+  }).format(date);
 ---
-<SiteLayout title="Blog" description="Writing on cloud architecture, distributed systems and applied AI." active="Blog">
-  <div class="page-head shell"><span class="eyebrow">Writing</span><h1>Blog</h1><p class="lead">Notes on architecture decisions, distributed systems and making AI applications useful in production.</p></div>
+
+<SiteLayout
+  title="Blog"
+  description="Writing on cloud architecture, distributed systems and applied AI."
+  active="Blog"
+>
+  <div class="page-head shell">
+    <span class="eyebrow">Writing</span><h1>Blog</h1><p class="lead">
+      Notes on architecture decisions, distributed systems and making AI
+      applications useful in production.
+    </p>
+  </div>
   <section class="section shell">
-    <div class="blog-heading"><h2>Writing &amp; planned topics</h2><p id="blog-count" aria-live="polite">{items.length} entries</p></div>
-    <div class="filters" role="group" aria-label="Filter blog topics">
-      <button type="button" class="filter active" data-filter="all" aria-pressed="true">All <span>{items.length}</span></button>
-      {categories.map(category => <button type="button" class="filter" data-filter={slug(category)} aria-pressed="false">{category} <span>{items.filter(item => item.category === category).length}</span></button>)}
+    <div class="blog-heading">
+      <h2>Writing &amp; planned topics</h2><p
+        id="blog-count"
+        aria-live="polite"
+      >
+        {items.length} entries
+      </p>
     </div>
-    <div class="posts blog-list">{items.map(item => <article data-category={slug(item.category)}>
-      <div class="post-stamp"><span class="meta">{item.status}</span><time datetime={item.date.toISOString()}>{item.status === 'Upcoming' ? 'Updated' : 'Dated'} {format(item.date)}</time></div>
-      <h3>{item.url ? <a href={item.url}>{item.title}</a> : item.title}</h3><p>{item.description}</p>
-      <div class="tags" aria-label="Tags">{item.tags.map(tag => <span>{tag}</span>)}</div>
-      {item.url && <a class="text-link post-link" href={item.url}>Read sample ↗</a>}
-    </article>)}</div>
-    <p class="note">The sample article demonstrates the blog layout. Upcoming topics have no publication date yet.</p>
+    <div class="filters" role="group" aria-label="Filter blog topics">
+      <button
+        type="button"
+        class="filter active"
+        data-filter="all"
+        aria-pressed="true">All <span>{items.length}</span></button
+      >
+      {
+        categories.map((category) => (
+          <button
+            type="button"
+            class="filter"
+            data-filter={slug(category)}
+            aria-pressed="false"
+          >
+            {category}{" "}
+            <span>
+              {items.filter((item) => item.category === category).length}
+            </span>
+          </button>
+        ))
+      }
+    </div>
+    <div class="posts blog-list">
+      {
+        items.map((item) => (
+          <article data-category={slug(item.category)}>
+            <div class="post-stamp">
+              <>
+                <span class="meta">{item.status}</span>
+                <time datetime={item.date.toISOString()}>
+                  {item.status === "Upcoming" ? "Updated" : "Dated"}{" "}
+                  {format(item.date)}
+                </time>
+              </>
+            </div>
+            <>
+              <h3>
+                {item.url ? <a href={item.url}>{item.title}</a> : item.title}
+              </h3>
+              <p>{item.description}</p>
+            </>
+            <div class="tags" aria-label="Tags">
+              {item.tags.map((tag) => (
+                <span>{tag}</span>
+              ))}
+            </div>
+          </article>
+        ))
+      }
+    </div>
   </section>
   <script is:inline src={`${base}blog.js`} defer></script>
 </SiteLayout>
